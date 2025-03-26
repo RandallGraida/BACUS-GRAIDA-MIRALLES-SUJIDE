@@ -13,10 +13,16 @@ public:
     // User Input
     std::string userPrompt;
     std::cout << "Please enter at least 2 sentences:" << std::endl;
+    std::cin >> userPrompt;
     std::getline(std::cin, userPrompt);
 
+    if (userPrompt.empty()) {
+      std::cout << "Error: Input cannot be empty. Please try again." << std::endl;
+      return 1;
+    }
+
     // Word count ito
-    int userPromptWordCount = 0;
+    int userPromptWordCount = 1;
     std::istringstream stream(userPrompt);
     std::string word;
     while (stream >> word) {
