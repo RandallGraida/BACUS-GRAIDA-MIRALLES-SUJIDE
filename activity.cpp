@@ -17,7 +17,7 @@ public:
     std::getline(std::cin, userPrompt);
 
     if (userPrompt.empty()) {
-      std::cout << "Error: Input cannot be empty. Please try again." << std::endl;
+      std::cout << "Error: Input cannot be empty / Input should be 2 words or sentences. Please try again." << std::endl;
       return 1;
     }
 
